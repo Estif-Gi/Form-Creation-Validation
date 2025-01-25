@@ -6,12 +6,12 @@ document.addEventListener('DOMContentLoaded', function() {
     const feedbackDiv = document.getElementById('form-feedback');
     form.addEventListener('submit',function (submit) {
         submit.preventDefault();
-        const userName = document.getElementById('username').value.trim();
+        const username = document.getElementById('username').value.trim();
         const password = document.getElementById('password').value.trim();
         const email = document.getElementById('email').value.trim();
         let isValid = true;
         let messages = [];
-        if(userName.length<3)
+        if(username.length < 3)
         {
             isValid = false;
             messages.push('invalid username');
