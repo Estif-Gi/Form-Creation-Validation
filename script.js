@@ -1,10 +1,10 @@
 
 
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', function() {
 
     const form = document.getElementById('registration-form');
     const feedbackDiv = document.getElementById('form-feedback');
-    form.addEventListener('submit',(submit) => {
+    form.addEventListener('submit',function (submit) {
         submit.preventDefault();
         const userName = document.getElementById('username').value.trim();
         const password = document.getElementById('password').value.trim();
@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         else
         {
-            feedbackDiv.innerHTML = message.join('<br>'); 
+            feedbackDiv.innerHTML = messages.join('<br>'); 
             feedbackDiv.style.color = '#dc3545'; 
         }
 
